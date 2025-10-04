@@ -1,0 +1,375 @@
+export const allCourses = {
+  "intro-to-jsx": {
+    id: "intro-to-jsx",
+    title: "JSX",
+    description: "Aprenda JSX, a sintaxe que permite escrever HTML dentro do JavaScript",
+    level: "Iniciante",
+    duration: "2 horas",
+    price: "Gratuito",
+    category: "Frontend",
+    rating: 4.9,
+    students: 1234,
+    image: "/javascript-code-editor.png",
+    instructor: {
+      name: "Carlos Silva",
+      bio: "Desenvolvedor React com 6 anos de experiência",
+      avatar: "/male-developer-avatar.png",
+    },
+    topics: ["JSX", "React", "Components", "Rendering", "Elements"],
+    whatYouWillLearn: [
+      "O que é JSX e como funciona",
+      "Como renderizar elementos JSX",
+      "Sintaxe e regras do JSX",
+      "Integração com React",
+      "Boas práticas de JSX",
+    ],
+    requirements: ["Conhecimento básico de JavaScript", "Familiaridade com HTML"],
+    totalLessons: 14,
+    lessons: [
+      {
+        id: 1,
+        title: "What is JSX?",
+        duration: "3 min",
+        type: "reading",
+        content: {
+          sections: [
+            {
+              title: "Introduction to JSX",
+              content:
+                'JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.\n\nWhat does "syntax extension" mean?\n\nIn this case, it means that JSX is not valid JavaScript. Web browsers can\'t read it!\n\nIf a JavaScript file contains JSX code, then that file will have to be compiled. That means that before the file reaches a web browser, a JSX compiler will translate any JSX into regular JavaScript.',
+            },
+          ],
+        },
+      },
+      {
+        id: 2,
+        title: "Rendering JSX",
+        duration: "2 min",
+        type: "exercise",
+        content: {
+          sections: [
+            {
+              title: "Rendering JSX",
+              content:
+                "You've learned how to write JSX elements! Now it's time to learn how to render them.\n\nTo render a JSX expression means to make it appear on screen.",
+            },
+          ],
+        },
+        codeExercise: {
+          initialCode: `import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\n// Copy code here:\n\n\n`,
+          solution: `import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\n// Copy code here:\nconst container = document.getElementById('app');\nconst root = createRoot(container);\nroot.render(<h1>Hello world</h1>);`,
+          hints: [
+            "Make sure to copy the code exactly as shown in the instructions.",
+            "The code should start on line 5.",
+            "Don't forget the semicolons at the end of each line.",
+          ],
+        },
+      },
+    ],
+  },
+  "exploring-data-python": {
+    id: "exploring-data-python",
+    title: "Exploring Data with Python",
+    description: "Aprenda a explorar e analisar dados usando Python e pandas",
+    level: "Iniciante",
+    duration: "4 horas",
+    price: "Gratuito",
+    category: "Data Science",
+    rating: 4.8,
+    students: 987,
+    image: "/python-code.png",
+    instructor: {
+      name: "Maria Santos",
+      bio: "Data Scientist com 5 anos de experiência",
+      avatar: "/female-developer-avatar.png",
+    },
+    topics: ["Python", "Pandas", "Data Analysis", "Jupyter", "Visualization"],
+    whatYouWillLearn: [
+      "Fundamentos do Python para análise de dados",
+      "Como usar a biblioteca pandas",
+      "Exploração e limpeza de dados",
+      "Visualização básica de dados",
+      "Trabalhar com Jupyter Notebooks",
+    ],
+    requirements: ["Conhecimento básico de programação", "Interesse em análise de dados"],
+    totalLessons: 11,
+    lessons: [
+      {
+        id: 1,
+        title: "Welcome to Exploring Data with Python",
+        duration: "1 min",
+        type: "jupyter",
+        content: {
+          sections: [
+            {
+              title: "Welcome to Exploring Data with Python",
+              content:
+                "Welcome! In this lesson, you'll learn how to explore data using standard data science tools:\n\n• the programming language Python\n• the Python data analysis tool pandas\n• the interactive Jupyter notebooks data analytics platform\n\nThroughout the lesson, we'll be working with a dataset of product repairs. This dataset is crowdsourced from events around the world that try to help people fix broken items like laptops, sewing machines, and more.\n\nUsing Python, we'll answer data questions like:\n\n• what kinds of products are brought to these events?\n• how often are these products actually fixed?\n• are more or fewer products being brought to these events over time?\n\nWe've loaded the first few rows of the dataset in the Learning Environment to the right. Each row, or record, corresponds to a single product brought to a repair club event.\n\nFor example, the third row of the dataset indicates that a 2015 Apple",
+            },
+          ],
+        },
+        jupyterNotebook: {
+          cells: [
+            {
+              type: "code",
+              content: "# import the pandas package\nimport pandas as pd",
+              output: "",
+            },
+            {
+              type: "code",
+              content: "# import the lesson dataset\ndf_repair = pd.read_csv('repair.csv')",
+              output: "",
+            },
+            {
+              type: "code",
+              content: "# display the the first five lines of the dataset\ndf_repair.head()",
+              output: {
+                type: "dataframe",
+                data: [
+                  ["0", "gor", "airconditioner", "delonghi", "2013.0", "6.0", "end of life", "2019"],
+                  ["1", "nld", "kettle", "royal swiss", "2019.0", "0.0", "fixed", "2019"],
+                  ["2", "swe", "mobile", "apple", "2015.0", "3.0", "repairable", "2018"],
+                  ["3", "ita", "desktop computer", "dell", "2011.0", "10.0", "fixed", "2021"],
+                  ["4", "bel", "power tool", "makita", "2015.0", "4.0", "end of life", "2019"],
+                ],
+                columns: [
+                  "",
+                  "country",
+                  "product_category",
+                  "brand",
+                  "year_of_manufacture",
+                  "product_age",
+                  "repair_status",
+                  "year_repaired",
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  "javascript-fundamentals": {
+    id: "javascript-fundamentals",
+    title: "JavaScript Fundamentals",
+    description:
+      "Aprenda os conceitos básicos da linguagem mais popular da web. Desde variáveis até funções avançadas.",
+    level: "Iniciante",
+    duration: "8 semanas",
+    rating: 4.9,
+    students: 1234,
+    price: "Gratuito",
+    category: "Frontend",
+    image: "/javascript-code-editor.png",
+    instructor: {
+      name: "Ana Silva",
+      bio: "Desenvolvedora Frontend com 8 anos de experiência",
+      avatar: "/female-developer-avatar.png",
+    },
+    topics: ["Variáveis", "Funções", "DOM", "Eventos", "ES6+"],
+    whatYouWillLearn: [
+      "Sintaxe básica do JavaScript",
+      "Variáveis, tipos de dados e operadores",
+      "Estruturas de controle (if/else, loops)",
+      "Funções e escopo",
+      "Manipulação do DOM",
+      "Eventos e interatividade",
+      "ES6+ features modernas",
+      "Debugging e boas práticas",
+    ],
+    requirements: ["Conhecimento básico de HTML e CSS", "Computador com acesso à internet", "Vontade de aprender!"],
+    totalLessons: 24,
+    curriculum: [
+      {
+        module: "Módulo 1: Introdução",
+        lessons: [
+          { title: "O que é JavaScript?", duration: "15 min", completed: false },
+          { title: "Configurando o ambiente", duration: "20 min", completed: false },
+          { title: "Primeiro programa", duration: "25 min", completed: false },
+        ],
+      },
+      {
+        module: "Módulo 2: Fundamentos",
+        lessons: [
+          { title: "Variáveis e tipos", duration: "30 min", completed: false },
+          { title: "Operadores", duration: "25 min", completed: false },
+          { title: "Estruturas condicionais", duration: "35 min", completed: false },
+        ],
+      },
+      {
+        module: "Módulo 3: Funções",
+        lessons: [
+          { title: "Declarando funções", duration: "30 min", completed: false },
+          { title: "Parâmetros e retorno", duration: "25 min", completed: false },
+          { title: "Escopo e closures", duration: "40 min", completed: false },
+        ],
+      },
+    ],
+    lessons: [
+      {
+        id: 1,
+        title: "O que é JavaScript?",
+        duration: "15 min",
+        type: "reading",
+        content: {
+          sections: [
+            {
+              title: "Introdução ao JavaScript",
+              content:
+                "JavaScript é uma linguagem de programação dinâmica que é amplamente usada para desenvolvimento web...",
+            },
+          ],
+        },
+      },
+    ],
+  },
+  "react-advanced": {
+    id: "react-advanced",
+    title: "React do Zero ao Avançado",
+    description: "Domine a biblioteca mais usada para desenvolvimento frontend. Hooks, Context, Redux e muito mais.",
+    level: "Intermediário",
+    duration: "12 semanas",
+    rating: 4.8,
+    students: 987,
+    price: "Gratuito",
+    category: "Frontend",
+    image: "/react-components-interface.jpg",
+    instructor: {
+      name: "Pedro Costa",
+      bio: "Desenvolvedor React Senior com 7 anos de experiência",
+      avatar: "/male-developer-avatar.png",
+    },
+    topics: ["Components", "Hooks", "Context", "Redux", "Testing"],
+    whatYouWillLearn: [
+      "Componentes funcionais e de classe",
+      "Hooks do React (useState, useEffect, etc.)",
+      "Context API para gerenciamento de estado",
+      "Redux para aplicações complexas",
+      "Testes unitários com Jest e Testing Library",
+    ],
+    requirements: ["Conhecimento sólido de JavaScript", "Experiência básica com React"],
+    totalLessons: 36,
+    lessons: [],
+  },
+  "python-beginners": {
+    id: "python-beginners",
+    title: "Python para Iniciantes",
+    description: "Comece sua jornada na programação com Python. Sintaxe simples e aplicações práticas.",
+    level: "Iniciante",
+    duration: "10 semanas",
+    rating: 4.9,
+    students: 2156,
+    price: "Gratuito",
+    category: "Backend",
+    image: "/python-code.png",
+    instructor: {
+      name: "João Santos",
+      bio: "Desenvolvedor Python com 10 anos de experiência",
+      avatar: "/male-developer-avatar.png",
+    },
+    topics: ["Sintaxe", "Estruturas", "OOP", "Bibliotecas", "Projetos"],
+    whatYouWillLearn: [
+      "Sintaxe básica do Python",
+      "Estruturas de dados (listas, dicionários)",
+      "Programação orientada a objetos",
+      "Bibliotecas populares do Python",
+      "Desenvolvimento de projetos práticos",
+    ],
+    requirements: ["Nenhum conhecimento prévio necessário"],
+    totalLessons: 30,
+    lessons: [],
+  },
+  "nodejs-api": {
+    id: "nodejs-api",
+    title: "Node.js e APIs REST",
+    description: "Construa APIs robustas e escaláveis com Node.js, Express e bancos de dados.",
+    level: "Intermediário",
+    duration: "10 semanas",
+    rating: 4.7,
+    students: 756,
+    price: "Gratuito",
+    category: "Backend",
+    image: "/nodejs-api-server.jpg",
+    instructor: {
+      name: "Lucas Oliveira",
+      bio: "Desenvolvedor Backend especialista em Node.js",
+      avatar: "/male-developer-avatar.png",
+    },
+    topics: ["Express", "MongoDB", "Authentication", "Testing", "Deploy"],
+    whatYouWillLearn: [
+      "Fundamentos do Node.js",
+      "Criação de APIs REST com Express",
+      "Integração com bancos de dados",
+      "Autenticação e autorização",
+      "Deploy e monitoramento",
+    ],
+    requirements: ["Conhecimento de JavaScript", "Conceitos básicos de programação"],
+    totalLessons: 28,
+    lessons: [],
+  },
+  "web-development": {
+    id: "web-development",
+    title: "Desenvolvimento Web Completo",
+    description: "HTML, CSS, JavaScript e frameworks modernos. Tudo que você precisa para ser um dev web.",
+    level: "Iniciante",
+    duration: "16 semanas",
+    rating: 4.8,
+    students: 1543,
+    price: "Gratuito",
+    category: "Fullstack",
+    image: "/web-development-responsive.jpg",
+    instructor: {
+      name: "Carla Ferreira",
+      bio: "Desenvolvedora Fullstack com 9 anos de experiência",
+      avatar: "/female-developer-avatar.png",
+    },
+    topics: ["HTML5", "CSS3", "JavaScript", "React", "Node.js"],
+    whatYouWillLearn: [
+      "HTML5 semântico e acessível",
+      "CSS3 moderno e responsivo",
+      "JavaScript ES6+ avançado",
+      "React para interfaces dinâmicas",
+      "Node.js para backend",
+    ],
+    requirements: ["Nenhum conhecimento prévio necessário"],
+    totalLessons: 48,
+    lessons: [],
+  },
+  "mobile-react-native": {
+    id: "mobile-react-native",
+    title: "Desenvolvimento Mobile com React Native",
+    description: "Crie apps nativos para iOS e Android usando React Native e JavaScript.",
+    level: "Avançado",
+    duration: "14 semanas",
+    rating: 4.6,
+    students: 432,
+    price: "Gratuito",
+    category: "Mobile",
+    image: "/mobile-app-react-native.jpg",
+    instructor: {
+      name: "Rafael Lima",
+      bio: "Desenvolvedor Mobile especialista em React Native",
+      avatar: "/male-developer-avatar.png",
+    },
+    topics: ["Navigation", "State Management", "Native Modules", "Publishing", "Performance"],
+    whatYouWillLearn: [
+      "Fundamentos do React Native",
+      "Navegação entre telas",
+      "Gerenciamento de estado",
+      "Integração com APIs nativas",
+      "Publicação nas lojas de apps",
+    ],
+    requirements: ["Conhecimento sólido de React", "JavaScript ES6+"],
+    totalLessons: 42,
+    lessons: [],
+  },
+}
+
+export const mockCourses = {
+  "intro-to-jsx": allCourses["intro-to-jsx"],
+  "exploring-data-python": allCourses["exploring-data-python"],
+}
+
+export const courseCategories = ["Todos", "Frontend", "Backend", "Data Science", "Mobile", "DevOps", "Fullstack"]
+
+export const courseLevels = ["Todos", "Iniciante", "Intermediário", "Avançado"]
